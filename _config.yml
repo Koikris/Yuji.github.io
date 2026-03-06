@@ -1,0 +1,21 @@
+# main text of home
+name: Yuji LI
+bio: Developer / Creator / Lifelong Learner
+
+# twitter summary info
+description: Yuji LI's personal homepage
+
+picture: assets/images/picture.jpg
+
+url: https://Yuji.github.io
+
+# if you don't have any of social below, comment the line
+# facebook: myfacebook
+# twitter: mytwitter
+github: Yuji
+email: [Koikris@outlook.com]
+
+gems:
+  - jekyll-seo-tag
+
+exclude: [README.md, Gemfile, Gemfile.lock, _site, Rakefile, travis.sh, vendor]

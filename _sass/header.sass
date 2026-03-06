@@ -1,0 +1,36 @@
+header
+  width: 35%
+  flex-shrink: 0
+  padding: 0 0 150px 0
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  align-items: center
+  // 左栏7等分: 2份空白 | 4份内容 | 1份空白
+  // padding-left: 2/7 = 28.57%, padding-right: 1/7 = 14.29%
+  padding-left: calc(35vw * 2 / 7)
+  padding-right: calc(35vw * 1 / 7)
+
+  @media #{$below}
+    width: 100%
+    padding-left: 0
+    padding-right: 0
+    align-items: flex-start
+
+  img
+    width: 100%
+    max-width: 100%
+    margin-bottom: 20px
+
+  nav ul
+    margin-bottom: 20px
+
+  nav ul li
+    margin-bottom: 10px
+
+  p
+    margin-bottom: 20px
+    width: 100%
+
+  small
+    font-size: 0.7em
