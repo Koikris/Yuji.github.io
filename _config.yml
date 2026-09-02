@@ -5,7 +5,13 @@ bio: Developer / Creator / Lifelong Learner
 # twitter summary info
 description: Yuji LI's personal homepage
 
+# 默认头像（SEO / 未配置 pictures 时的回退）
 picture: assets/images/picture.jpg
+
+# 头像轮播：按顺序填写路径即可，可继续往下加
+pictures:
+  - assets/images/picture.jpg
+  - assets/images/picture1.jpg
 
 url: https://Yuji.github.io
 
