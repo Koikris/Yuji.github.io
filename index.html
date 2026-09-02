@@ -12,7 +12,7 @@ title: Home
       {% for pic in photos %}
         <img
           class="picture-carousel__image{% if forloop.first %} is-active{% endif %}"
-          src="{{ pic }}"
+          src="{{ pic | relative_url }}"
           alt="{{ site.name }} picture {{ forloop.index }}"
           {% unless forloop.first %}loading="lazy"{% endunless %}
         />
@@ -45,9 +45,8 @@ title: Home
   </h1>
 
   <p>
-    <!-- 修改下面三行为你的真实信息 -->
-    <strong><span style="color: #a085c6;">&#10023;</span>PHD Student</strong> in Marketing - Quantitative Marketing and Strategy<br>
-    <strong><span style="color: #a085c6;">&#10023;</span>Not A Full Stack Developer</strong><br>
+    <strong><span style="color: #a085c6;">&#10023;</span>PhD Student</strong> in Marketing — Quantitative Marketing and Strategy<br>
+    <strong><span style="color: #a085c6;">&#10023;</span>Statistics · NLP · Not A Full Stack Developer</strong><br>
   </p>
 
   <nav>
@@ -66,41 +65,47 @@ title: Home
   <p>
     <strong>About Me</strong><br>
     Hi, I'm Yuji.<br>
-    <span style="color: #a085c6;">✧</span> I'm a <span style="color: #a085c6;">PhD student</span> in Quantitative Marketing who enjoys <span style="color: #a085c6;">developing</span> small applications.<br>
+    <span style="color: #a085c6;">✧</span> I'm a <span style="color: #a085c6;">PhD student</span> in Quantitative Marketing and Strategy. My work sits between <span style="color: #a085c6;">statistics</span>, <span style="color: #a085c6;">computational text analysis</span>, and <span style="color: #a085c6;">NLP</span>.<br>
+    <span style="color: #a085c6;">✧</span> I enjoy <span style="color: #a085c6;">developing</span> small applications, especially data and video-processing tools in <span style="color: #a085c6;">Python</span>.<br>
     <span style="color: #a085c6;">✧</span> My hobbies include playing <span style="color: #a085c6;">games</span> (console, mobile, and PC) and watching horror and thriller <span style="color: #a085c6;">movies</span>.<br>
     <span style="color: #a085c6;">✧</span> I like cute things and sugary drinks.<br>
-    Contact me if you'd like to collaborate with me or know more about me.<br>
+    Contact me if you'd like to collaborate or know more about me.
   </p>
 
   <p>
-    <strong>Academic background</strong><br>
+    <strong>Education</strong><br>
+    <span style="color: #a085c6;">✧</span> PhD in <span style="color: #a085c6;">Marketing</span> — Quantitative Marketing and Strategy<br>
+    <span class="item-sub">in progress</span>
     <span style="color: #a085c6;">✧</span> The University of Hong Kong<br>
-        Master’s degree in <span style="color: #a085c6;">Data Science</span><br>  
+    <span class="item-sub">Master’s degree in <span style="color: #a085c6;">Data Science</span></span>
     <span style="color: #a085c6;">✧</span> The Chinese University of Hong Kong<br>
-        Bachelor’s degree in <span style="color: #a085c6;">Statistics</span><br>
-        Bachelor’s degree in <span style="color: #a085c6;">Computer Science</span><br>
-
+    <span class="item-sub">Bachelor’s degree in <span style="color: #a085c6;">Statistics</span></span>
+    <span class="item-sub">Bachelor’s degree in <span style="color: #a085c6;">Computer Science</span></span>
   </p>
 
   <p>
-    <strong>Tech Stack</strong><br>   
-    <span style="color: #a085c6;">✧</span> LAMP Stack: Linux, Apache, MySQL, PHP<br>
-    <span style="color: #a085c6;">✧</span> MEAN/MERN Stack: MongoDB, Express.js, Angular/React, Node.js, Nest.js<br>
-    My most frequently used programming language is <span style="color: #a085c6;">Python</span>.<br>
-
+    <strong>Research</strong><br>
+    <span style="color: #a085c6;">✧</span> Interests: <span style="color: #a085c6;">quantitative marketing</span>, computational social science, text reuse, and applied <span style="color: #a085c6;">NLP</span> for classical and modern Chinese.<br>
+    <span style="color: #a085c6;">✧</span> Digital History Lab, CUHK — student researcher focusing on <span style="color: #a085c6;">statistical analysis</span> for computational studies of Matteo Ricci’s Chinese writings, and RoBERTa-based translation from Classical Chinese.<br>
+    <span style="color: #a085c6;">✧</span> Research supported in part by the <span style="color: #a085c6;">HKSAR STEM Internship Scheme</span>.
   </p>
 
   <p>
-    <strong>Publication</strong><br>
-    <span style="color: #a085c6;">✧</span> McManus, S.M., Li, Y., Tam, L. et al. Measuring accommodation: a quantitative text-reuse analysis of Matteo Ricci’s reliance on chinese classics. Int J Digit Humanities (2025). https://doi.org/10.1007/s42803-025-00104-w<br>
-    <span style="color: #a085c6;">✧</span> McManus, S. M., Li, Y., Liu, R., Tam, L., Qiu, S., & Yu, L. (2023). The Ups and Downs of Training RoBERTa-based models on Smaller Datasets for Translation Tasks from Classical Chinese into Modern Standard Mandarin and Modern English. In Proceedings of ALT2023: Ancient Language Translation Workshop (pp. 15–22). Asia-Pacific Association for Machine Translation.<br>  
+    <strong>Publications</strong><br>
+    <span style="color: #a085c6;">✧</span> McManus, S. M., Li, Y., Tam, L., Qiu, S., Liu, S., Ng, D., Wong, W., &amp; Yu, L. (2025). Measuring accommodation: a quantitative text-reuse analysis of Matteo Ricci’s reliance on Chinese classics. <em>International Journal of Digital Humanities</em>. <a href="https://doi.org/10.1007/s42803-025-00104-w">doi.org/10.1007/s42803-025-00104-w</a><br>
+    <span style="color: #a085c6;">✧</span> McManus, S. M., Liu, R., Li, Y., Tam, L., Qiu, S., &amp; Yu, L. (2023). The Ups and Downs of Training RoBERTa-based models on Smaller Datasets for Translation Tasks from Classical Chinese into Modern Standard Mandarin and Modern English. In <em>Proceedings of ALT2023: Ancient Language Translation Workshop</em> (pp. 15–22). Asia-Pacific Association for Machine Translation. <a href="https://aclanthology.org/2023.alt-1.2/">aclanthology.org/2023.alt-1.2</a>
   </p>
 
-
-<!--   
   <p>
     <strong>Projects</strong><br>
-    <!-- 在这里列出你的项目，例如：-->
-    <!-- <a href="https://github.com/Yuji">My GitHub Repos</a>
-  </p> --> 
+    <span style="color: #a085c6;">✧</span> <a href="https://github.com/Koikris/Yutto-bilibili-video-downloader">Yutto Bilibili video downloader</a> — Python batch downloader with proxy rotation, resume, logging, and ffmpeg cover extraction.<br>
+    <span style="color: #a085c6;">✧</span> <a href="https://github.com/Koikris/Pipeline-for-Processing-Videos-Features-from-ALIYUN-OSS">Video feature pipeline</a> — Jupyter pipeline for processing video features stored on Aliyun OSS.
+  </p>
+
+  <p>
+    <strong>Tech Stack</strong><br>
+    <span style="color: #a085c6;">✧</span> <span style="color: #a085c6;">Python</span> for research, NLP, and data pipelines (pandas, RoBERTa / Siku-RoBERTa, Jupyter).<br>
+    <span style="color: #a085c6;">✧</span> LAMP Stack: Linux, Apache, MySQL, PHP<br>
+    <span style="color: #a085c6;">✧</span> MEAN/MERN Stack: MongoDB, Express.js, Angular/React, Node.js, Nest.js
+  </p>
 </section>
