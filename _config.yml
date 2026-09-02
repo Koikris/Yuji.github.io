@@ -1,19 +1,28 @@
 # main text of home
 name: Yuji LI
-bio: Developer / Creator / Lifelong Learner
+bio: PhD student in Quantitative Marketing. Statistics, NLP, and small applications.
 
 # twitter summary info
-description: Yuji LI's personal homepage
+description: Yuji LI's personal homepage — quantitative marketing, data science, and computational text analysis.
 
+# 默认头像（SEO / 未配置 pictures 时的回退）
 picture: assets/images/picture.jpg
 
-url: https://Yuji.github.io
+# 头像轮播：按顺序填写路径即可，可继续往下加
+pictures:
+  - assets/images/picture.jpg
+  - assets/images/picture1.jpg
+
+url: https://yujilychee.cv
 
 # if you don't have any of social below, comment the line
 # facebook: myfacebook
 # twitter: mytwitter
-github: Yuji
-email: [Koikris@outlook.com]
+github: Koikris
+email: Koikris@outlook.com
+
+plugins:
+  - jekyll-seo-tag
 
 gems:
   - jekyll-seo-tag
