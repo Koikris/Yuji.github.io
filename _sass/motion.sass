@@ -1,0 +1,111 @@
+@keyframes glow-pulse
+  0%, 100%
+    box-shadow: 0 0 0 1px rgba(160, 133, 198, 0.18)
+  50%
+    box-shadow: 0 0 0 1px rgba(252, 209, 116, 0.28), 0 10px 28px rgba(160, 133, 198, 0.16)
+
+.has-js [data-reveal]
+  opacity: 0
+  transform: translateY(16px)
+
+.has-js [data-reveal].is-in
+  opacity: 1
+  transform: none
+  transition: opacity 0.7s ease, transform 0.7s ease
+
+.has-js header [data-reveal]:nth-child(1).is-in
+  transition-delay: 0.02s
+
+.has-js header [data-reveal]:nth-child(2).is-in
+  transition-delay: 0.12s
+
+.has-js header [data-reveal]:nth-child(3).is-in
+  transition-delay: 0.2s
+
+.has-js header [data-reveal]:nth-child(4).is-in
+  transition-delay: 0.28s
+
+.has-js header [data-reveal]:nth-child(5).is-in
+  transition-delay: 0.36s
+
+.has-js .content [data-reveal]:nth-child(1).is-in
+  transition-delay: 0.08s
+
+.has-js .content [data-reveal]:nth-child(2).is-in
+  transition-delay: 0.14s
+
+.has-js .content [data-reveal]:nth-child(3).is-in
+  transition-delay: 0.2s
+
+.has-js .content [data-reveal]:nth-child(4).is-in
+  transition-delay: 0.26s
+
+.has-js .content [data-reveal]:nth-child(5).is-in
+  transition-delay: 0.32s
+
+.has-js .content [data-reveal]:nth-child(6).is-in
+  transition-delay: 0.38s
+
+header h1 a
+  transition: color 0.35s ease, text-shadow 0.35s ease
+
+  &:hover,
+  &:focus-visible
+    color: $gama
+    text-shadow: 0 0 18px rgba(252, 209, 116, 0.35)
+
+header .picture-carousel__stage
+  transition: box-shadow 0.45s ease, transform 0.45s ease
+  animation: glow-pulse 5.5s ease-in-out infinite
+
+  &:hover
+    transform: translateY(-3px)
+    box-shadow: 0 0 0 1px rgba(252, 209, 116, 0.35), 0 16px 36px rgba(25, 17, 31, 0.45)
+
+header nav a
+  position: relative
+  display: inline-block
+  padding-bottom: 2px
+
+  &:after
+    content: ""
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 1px
+    background: $gama
+    transform: scaleX(0)
+    transform-origin: left
+    transition: transform 0.3s ease
+
+  &:hover:after,
+  &:focus-visible:after
+    transform: scaleX(1)
+
+.content a
+  transition: color 0.3s ease, border-color 0.3s ease
+  border-bottom-color: rgba(160, 133, 198, 0.45)
+
+  &:hover,
+  &:focus-visible
+    border-bottom-color: $gama
+
+.content p strong
+  transition: color 0.3s ease
+
+.content p:hover > strong:first-child
+  color: $gama
+
+@media (prefers-reduced-motion: reduce)
+  *,
+  *::before,
+  *::after
+    animation: none !important
+    transition: none !important
+    scroll-behavior: auto !important
+
+  .has-js [data-reveal],
+  .has-js [data-reveal].is-in
+    opacity: 1
+    transform: none
